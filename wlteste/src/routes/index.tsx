@@ -1,12 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "../assets/hero.jpg";
-import serviceImagens from "../assets/service-imagens.jpg";
-import serviceIluminacao from "../assets/service-iluminacao.jpg";
 import serviceSonorizacao from "../assets/service-sonorizacao.jpg";
+import serviceLed from "../assets/service-led.jpg";
+import serviceAudiovisual from "../assets/service-audiovisual.jpg";
 import portfolio1 from "../assets/portfolio-1.jpg";
 import portfolio2 from "../assets/portfolio-2.jpg";
 import portfolio3 from "../assets/portfolio-3.jpg";
 import portfolio4 from "../assets/portfolio-4.jpg";
+
+const baseUrl = import.meta.env.BASE_URL;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -17,7 +19,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Desde 2002, a WL Digital oferece locação de som, iluminação e imagem para palestras e eventos em Brasília com excelência e atendimento profissional.",
+          "Desde 2002, a WL Digital oferece sonorização, painéis de LED e serviços audiovisuais para palestras e eventos em Brasília.",
       },
       {
         property: "og:title",
@@ -26,7 +28,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Som, iluminação e imagem para eventos corporativos e palestras em Brasília desde 2002.",
+          "Sonorização, painéis de LED e serviços audiovisuais para eventos corporativos e palestras em Brasília desde 2002.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -47,13 +49,16 @@ function Index() {
         }}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#inicio" className="flex items-baseline gap-1">
-            <span className="text-2xl font-black tracking-tight text-primary">
-              WL
-            </span>
-            <span className="text-sm font-medium uppercase tracking-widest text-primary-glow">
-              Digital
-            </span>
+          <a
+            href="#inicio"
+            className="flex items-center"
+            aria-label="WL Digital — início"
+          >
+            <img
+              src={`${baseUrl}wl-logo.png`}
+              alt="WL Digital"
+              className="h-9 w-auto rounded-md bg-white/95 p-1"
+            />
           </a>
           <nav className="hidden gap-8 text-sm font-medium uppercase tracking-wider md:flex">
             <a
@@ -124,19 +129,19 @@ function Index() {
             Brasília
           </p>
           <h1 className="max-w-4xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl md:text-7xl lg:text-8xl">
-            Seu evento em{" "}
+            Seu evento na mão dos{" "}
             <span
               className="bg-clip-text text-transparent"
               style={{ backgroundImage: "var(--gradient-brand)" }}
             >
-              alta definição
+              melhores profissionais
             </span>
             .
           </h1>
           <p className="mt-6 max-w-2xl text-base text-muted-foreground sm:mt-8 sm:text-lg md:text-xl">
-            Locação de equipamentos audiovisuais para palestras, eventos
-            corporativos e sociais. Som, iluminação e imagem com padrão de
-            excelência.
+            Locação de equipamentos audiovisuais para palestras e eventos
+            corporativos. Sonorização, painéis de LED e suporte técnico com
+            padrão de excelência.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
             <a
@@ -156,7 +161,7 @@ function Index() {
 
           <div className="mt-16 grid max-w-3xl grid-cols-3 gap-4 sm:mt-20 sm:gap-8">
             {[
-              { n: "22+", l: "Anos de mercado" },
+              { n: "24+", l: "Anos de mercado" },
               { n: "500+", l: "Eventos realizados" },
               { n: "100%", l: "Compromisso" },
             ].map((s) => (
@@ -232,25 +237,25 @@ function Index() {
               Serviços
             </p>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Os pilares do seu evento.
+              Trabalhamos com
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {[
               {
-                img: serviceImagens,
-                t: "Imagens",
-                d: "Trabalhamos com os melhores equipamentos do mercado, que deixarão as imagens do seu evento impecáveis.",
-              },
-              {
-                img: serviceIluminacao,
-                t: "Iluminação",
-                d: "Iluminação de qualidade é feita por bons equipamentos e equipe profissionalizada — nesses quesitos, conte conosco.",
-              },
-              {
                 img: serviceSonorizacao,
                 t: "Sonorização",
                 d: "Equipamentos sonoros de alta qualidade, aliados a uma equipe altamente capacitada, para que seu evento seja um sucesso.",
+              },
+              {
+                img: serviceLed,
+                t: "Painéis de LED",
+                d: "Painéis de LED de alta definição para vídeo, apresentações e identidade visual com brilho e nitidez em qualquer ambiente.",
+              },
+              {
+                img: serviceAudiovisual,
+                t: "Serviços Audiovisuais",
+                d: "Solução completa em imagem, iluminação, projeção e suporte técnico para palestras, congressos e eventos corporativos.",
               },
             ].map((s) => (
               <article
@@ -521,12 +526,13 @@ function Index() {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-8 text-sm text-muted-foreground">
-          <div className="flex items-baseline gap-1">
-            <span className="text-lg font-black text-primary">WL</span>
-            <span className="text-xs font-medium uppercase tracking-widest text-primary-glow">
-              Digital
-            </span>
-          </div>
+          <a href="#inicio" aria-label="Voltar ao início">
+            <img
+              src={`${baseUrl}wl-logo.png`}
+              alt="WL Digital"
+              className="h-7 w-auto rounded bg-white/90 p-1"
+            />
+          </a>
           <span>
             © {new Date().getFullYear()} WL Digital — Locação de Equipamentos
             Audiovisuais

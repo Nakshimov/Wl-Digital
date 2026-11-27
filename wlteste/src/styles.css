@@ -22,13 +22,13 @@
   --background: #001a4d;
   --foreground: #eaf4ff;
   --card: #002966;
-  --primary: #009cfc;
+  --primary: #0099ff;
   --primary-foreground: #ffffff;
-  --primary-glow: #009cfc;
+  --primary-glow: #52a7fe;
   --muted-foreground: #b8d4ff;
   --border: #0a3d99;
-  --gradient-brand: linear-gradient(90deg, #003399, #009cfc);
-  --shadow-glow: 0 20px 60px -20px rgb(0 156 252 / 0.5);
+  --gradient-brand: linear-gradient(90deg, #003399, #0099ff);
+  --shadow-glow: 0 20px 60px -20px rgb(0 153 255 / 0.5);
 }
 
 @layer base {
@@ -39,5 +39,6 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: "Dosis", ui-sans-serif, system-ui, sans-serif;
   }
 }

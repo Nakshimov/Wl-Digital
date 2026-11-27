@@ -70,13 +70,35 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "theme-color", content: "#003399" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&display=swap",
+      },
       { rel: "stylesheet", href: appCss },
       {
         rel: "icon",
-        href: `${import.meta.env.BASE_URL}favicon.svg`,
-        type: "image/svg+xml",
+        href: `${import.meta.env.BASE_URL}favicon-32x32.png`,
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        rel: "icon",
+        href: `${import.meta.env.BASE_URL}favicon-192x192.png`,
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        rel: "apple-touch-icon",
+        href: `${import.meta.env.BASE_URL}apple-touch-icon.png`,
       },
     ],
   }),
