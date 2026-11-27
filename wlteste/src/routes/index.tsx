@@ -479,11 +479,11 @@ function Index() {
                 Palestras · Corporativo · Social
               </span>
             </div>
-            <div className="grid grid-flow-dense grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {portfolioImages.map((src, i) => (
                 <div
                   key={i}
-                  className={`relative overflow-hidden rounded-2xl ${i % 3 === 0 ? "lg:row-span-2 lg:aspect-[3/4]" : "aspect-square"}`}
+                  className="relative aspect-[4/3] overflow-hidden rounded-2xl"
                 >
                   <img
                     src={src}
