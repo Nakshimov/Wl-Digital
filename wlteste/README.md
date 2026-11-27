@@ -1,29 +1,32 @@
-# Welcome to your Lovable project
+# WL Digital
 
-This project was built with [Lovable](https://lovable.dev).
+Site estático da WL Digital, publicado no GitHub Pages em:
+https://nakshimov.github.io/Wl-Digital/
 
-## Build with Lovable
-
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Desenvolvimento
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+bun install --frozen-lockfile
+bun run dev
 ```
 
-## Built with
+## Validação
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+```sh
+bun run lint
+bun x tsc --noEmit
+bun run build
+```
+
+O build gera `dist/client` com prerender da home. O projeto usa `nitro: false`
+e `base: "/Wl-Digital/"` para funcionar como site de projeto no GitHub Pages.
+
+## Publicação
+
+O deploy é manual pela branch `gh-pages`:
+
+1. fazer commit e push normal na `main`;
+2. copiar o conteúdo de `dist/client` para o worktree da `gh-pages`;
+3. fazer commit e push normal na `gh-pages`.
+
+O arquivo `public/.nojekyll` precisa estar no build.
