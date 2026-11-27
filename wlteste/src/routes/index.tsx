@@ -185,7 +185,7 @@ function Index() {
               alt="WL Digital"
               width={128}
               height={73}
-              className="h-9 w-auto rounded-md bg-white/95 p-1"
+              className="h-9 w-auto drop-shadow-[0_0_10px_rgba(0,153,255,0.35)]"
             />
           </a>
           <details className="relative md:hidden">
@@ -206,7 +206,7 @@ function Index() {
                 </a>
               ))}
               <a
-                href="https://wa.me/5561984098162"
+                href="https://wa.me/556133284042"
                 className="mt-1 rounded-lg px-3 py-2 font-semibold text-primary transition-colors hover:bg-background"
               >
                 Orçamento
@@ -228,7 +228,7 @@ function Index() {
             ))}
           </nav>
           <a
-            href="https://wa.me/5561984098162"
+            href="https://wa.me/556133284042"
             className="hidden rounded-full px-5 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105 md:inline-flex"
             style={{ backgroundImage: "var(--gradient-brand)" }}
           >
@@ -541,8 +541,8 @@ function Index() {
                     },
                     {
                       l: "WhatsApp",
-                      v: "(61) 98409-8162",
-                      href: "https://wa.me/5561984098162",
+                      v: "(61) 3328-4042",
+                      href: "https://wa.me/556133284042",
                       cta: "Abrir WhatsApp",
                       icon: (
                         <svg
@@ -676,7 +676,7 @@ function Index() {
               alt="WL Digital"
               width={96}
               height={55}
-              className="h-7 w-auto rounded bg-white/90 p-1"
+              className="h-7 w-auto drop-shadow-[0_0_8px_rgba(0,153,255,0.3)]"
             />
           </a>
           <span>
@@ -687,10 +687,10 @@ function Index() {
       </footer>
 
       <a
-        href="https://wa.me/5561984098162?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!"
+        href="https://wa.me/556133284042?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento!"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-full border border-white/20 p-1.5 pr-4 text-primary-foreground shadow-[var(--shadow-glow)] ring-1 ring-white/10 transition-transform duration-300 hover:-translate-y-0.5 hover:scale-105 sm:pr-5"
+        className="fixed bottom-4 right-4 z-50 flex items-center gap-3 rounded-full border border-white/20 p-1.5 text-primary-foreground shadow-[var(--shadow-glow)] ring-1 ring-white/10 transition-transform duration-300 hover:-translate-y-0.5 hover:scale-105 sm:bottom-5 sm:right-5 sm:pr-5"
         style={{ backgroundImage: "var(--gradient-brand)" }}
       >
         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/95 text-[#25D366] shadow-md">
